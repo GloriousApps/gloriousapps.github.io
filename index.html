@@ -3,76 +3,353 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="GloriousApps, Xiaomi HyperOS için güçlü ve özenli Android araçları geliştirir." />
-    <meta name="theme-color" content="#11152c" />
-    <title>GloriousApps — HyperOS için güçlü araçlar</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="description" content="GloriousApps // Xiaomi HyperOS ve Android ekosistemi için sistem düzeyinde açık kaynaklı araçlar, tema stüdyosu ve mühendislik yazılımları." />
+    <meta name="theme-color" content="#060911" />
+    <title>GloriousApps // Android &amp; HyperOS Tooling Lab</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="brand.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="tech-workspace.css" />
   </head>
   <body>
-    <div class="noise" aria-hidden="true"></div>
+    <div class="scanline-layer" aria-hidden="true"></div>
+
+    <!-- Top Telemetry & Status Bar -->
+    <aside class="telemetry-ticker">
+      <div class="ticker-left">
+        <span class="status-badge"><span class="status-pulse"></span> SYS.ONLINE // 99.98%</span>
+        <span class="ticker-coords">LOC: ISTANBUL (TR) // GA-SYS-01</span>
+        <span class="ticker-coords">TARGET: HYPEROS 1.0 • 2.0 • 3.0 / ANDROID 13+</span>
+      </div>
+      <div class="ticker-right">
+        <a href="https://github.com/GloriousApps" target="_blank" rel="noreferrer">GIT: @GloriousApps</a>
+        <a href="https://t.me/Glorioustr" target="_blank" rel="noreferrer">TG: @Glorioustr</a>
+        <span>KERNEL: ART / LINUX</span>
+      </div>
+    </aside>
+
+    <!-- Main Navigation Header -->
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="GloriousApps ana sayfa"><img class="brand-logo" src="assets/glorious-g-logo.png" alt="" />GloriousApps</a>
-      <nav aria-label="Ana menü"><a href="#apps">Uygulamalar</a><a href="#about">Hakkımızda</a></nav>
-      <a class="header-link" href="https://t.me/Glorioustr" target="_blank" rel="noreferrer">Telegram’dan yaz <span>↗</span></a>
+      <a class="brand" href="#top" aria-label="GloriousApps Ana Sayfa">
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="assets/glorious-g-logo.png" alt="GloriousApps Logo" />
+        </div>
+        <span>GloriousApps</span>
+        <span class="brand-badge">TOOLING LAB // v5.0</span>
+      </a>
+
+      <nav aria-label="Ana Navigasyon">
+        <ul class="nav-menu">
+          <li><a href="#apps"><span class="nav-idx">[01]</span> MODÜLLER</a></li>
+          <li><a href="#telemetry"><span class="nav-idx">[02]</span> TELEMETRİ</a></li>
+          <li><a href="#architecture"><span class="nav-idx">[03]</span> MİMARİ</a></li>
+          <li><a href="#connect"><span class="nav-idx">[04]</span> KONSOL</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-action">
+        <a class="btn-terminal" href="https://t.me/Glorioustr" target="_blank" rel="noreferrer">
+          <span>&gt;_</span> TELEGRAM İLETİŞİM ↗
+        </a>
+      </div>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow"><span></span> BİR FİKİRLE BAŞLAR</p>
-          <h1>Küçük anları<br /><em>biraz daha</em><br />güzel yapıyorum.</h1>
-          <p class="intro">Hayatın temposuna nazikçe eşlik eden, kullanması keyifli mobil deneyimler tasarlıyorum.</p>
-          <a class="primary-button" href="#apps">Uygulamalarımı keşfet <span>↓</span></a>
+      <!-- HERO WORKBENCH SECTION -->
+      <section class="hero-workbench">
+        <div class="hero-content corner-bracket">
+          <p class="hero-sys-tag">SYSTEM SPEC // ANDROID &amp; HYPEROS TOOLING ENGINE</p>
+          <h1 class="hero-title">
+            Android Deneyimini
+            <span class="neon-text">Sistem Düzeyinde</span>
+            Yönetin.
+          </h1>
+          <p class="hero-desc">
+            Xiaomi HyperOS ve Android ekosistemindeki kısıtlamaları kaldıran, performans odaklı ve güvenli sistem modülleri. Shizuku API ve Root desteğiyle tam sistem kontrolü.
+          </p>
+
+          <div class="hero-tech-pills">
+            <span class="tech-tag highlight">⚡ MTZ STUDIO v5.0</span>
+            <span class="tech-tag">ROOT DESTEKLİ HOOKS</span>
+            <span class="tech-tag">HYPEROS 2.0 / 3.0</span>
+            <span class="tech-tag">ARM64-V8A OPTİMİZE</span>
+            <span class="tech-tag highlight">%100 AÇIK KAYNAK</span>
+          </div>
+
+          <div class="hero-cta-group">
+            <a class="btn-primary" href="#apps">
+              <span>⚡</span> AKTİF MODÜLLERİ AÇ ↓
+            </a>
+            <a class="btn-secondary" href="https://github.com/GloriousApps" target="_blank" rel="noreferrer">
+              <span>⌘</span> GITHUB ORGANİZASYONU ↗
+            </a>
+          </div>
         </div>
-        <div class="hero-art" aria-label="Glorious Apps için soyut mobil uygulama illüstrasyonu">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <img src="assets/glorious-apps-hero.png" alt="Işıkla çevrili soyut mobil ekranlar" />
-          <p class="art-note">TASARIMLA DÜŞÜNÜLEREK<br />YAPILMIŞTIR <i>✦</i></p>
+
+        <!-- RIGHT SIDE TERMINAL CONSOLE -->
+        <div class="hero-console-box" aria-label="Canlı Sistem Terminali Simülasyonu">
+          <div class="console-header">
+            <div class="console-dots">
+              <span class="console-dot red"></span>
+              <span class="console-dot yellow"></span>
+              <span class="console-dot green"></span>
+            </div>
+            <span class="console-title">gloriousapps@system-shell: ~ (bash)</span>
+            <span class="console-title">PORT: 4173</span>
+          </div>
+          <div class="console-body">
+            <div class="console-line">
+              <span class="console-prompt">&gt;</span>
+              <span class="console-cmd">gloriousapps --module HyperOS-MTZ-Studio --version</span>
+            </div>
+            <div class="console-output success">
+              [RELEASE] MTZ Theme Decompiler Engine v5.0 (Latest Build)
+            </div>
+            <div class="console-output">
+              ├─ Architecture: Android 13+ / HyperOS Native
+            </div>
+            <div class="console-output">
+              └─ Features: Deep MTZ parser, batch decompile, font &amp; icon extractor
+            </div>
+            <div class="console-line" style="margin-top: 8px;">
+              <span class="console-prompt">&gt;</span>
+              <span class="console-cmd">gloriousapps --module Gestures-Activator --check-root</span>
+            </div>
+            <div class="console-output cyan">
+              [PRIVILEGED] Root Permission: GRANTED (Magisk / KernelSU / APatch)
+            </div>
+            <div class="console-output success">
+              [SUCCESS] Full-screen navigation gestures linked to 3rd-party launchers.
+            </div>
+            <div class="console-line" style="margin-top: 10px;">
+              <span class="console-prompt">&gt;</span>
+              <span class="console-cmd">gloriousapps-workspace --status</span>
+              <span class="console-cursor"></span>
+            </div>
+          </div>
         </div>
-        <a class="scroll-cue" href="#apps">Kaydır <span>↓</span></a>
       </section>
 
-      <section class="apps-section" id="apps">
-        <div class="section-heading">
-          <p class="eyebrow"><span></span> UYGULAMALAR</p>
-          <h2>Her biri, gününe<br />iyi gelen bir şey için.</h2>
-          <p>İyi fikirler karmaşık olmak zorunda değil. Bu yüzden uygulamalarım yalnızca ihtiyaç duyduğun şeyi, doğru zamanda sunar.</p>
+      <!-- LIVE METRICS & SPECS STRIP -->
+      <section class="metrics-strip" id="telemetry">
+        <div class="metric-item">
+          <div class="metric-val">HyperOS <span class="accent">3.0</span></div>
+          <div class="metric-label">En Son Sistem Uyumluluğu</div>
         </div>
-        <div class="app-grid">
-          <article class="app-card bloom">
-            <div class="app-card-top"><span class="app-icon">✦</span><span class="pill">ANDROID</span></div>
-            <div class="app-visual visual-bloom"><div class="flower flower-a">✿</div><div class="flower flower-b">✦</div><div class="flower flower-c">✿</div></div>
-            <div class="app-card-copy"><p class="app-number">01 / THEME STUDIO</p><h3>HyperOS MTZ Studio</h3><p>HyperOS ve MIUI için MTZ temalarını içe aktar, düzenle, çevir, dönüştür ve birleştir.</p><a href="https://github.com/GloriousApps/HyperOS-MTZ-Studio" target="_blank" rel="noreferrer">GitHub’da incele <span>↗</span></a></div>
+        <div class="metric-item">
+          <div class="metric-val">v5.0 <span class="accent">LATEST</span></div>
+          <div class="metric-label">MTZ Studio 5. Nesil Çekirdek</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-val">0<span class="accent">%</span></div>
+          <div class="metric-label">Reklam &amp; Arka Plan Bloatware</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-val">GPL <span class="accent">3.0</span></div>
+          <div class="metric-label">Açık Kaynak &amp; Şeffaf Mimari</div>
+        </div>
+      </section>
+
+      <!-- MODULES WORKSPACE GRID -->
+      <section class="modules-section" id="apps">
+        <div class="section-hud-header">
+          <div>
+            <p class="section-label"><span>//</span> AKTİF SİSTEM MODÜLLERİ</p>
+            <h2 class="section-heading-title">Doğrudan İşe Yarayan Araçlar</h2>
+          </div>
+          <div class="section-hud-counter">MOD_COUNT: 03 // ALL_VERIFIED</div>
+        </div>
+
+        <div class="module-grid">
+          <!-- CARD 01: MTZ STUDIO -->
+          <article class="module-card featured">
+            <div class="card-topbar">
+              <span class="module-id">01 // THEME STUDIO</span>
+              <span class="module-status stable">● STABLE v5.0</span>
+            </div>
+            <div class="card-visual-area">
+              <img class="card-icon-img" src="assets/mtz-studio-icon.png" alt="HyperOS MTZ Studio Uygulama Logosu" />
+            </div>
+            <div class="card-content">
+              <div class="card-badge-row">
+                <span class="micro-badge cyan">v5.0 SÜRÜMÜ</span>
+                <span class="micro-badge">ROOT / SHIZUKU</span>
+                <span class="micro-badge">HYPEROS NATIVE</span>
+              </div>
+              <h3 class="card-title">HyperOS MTZ Studio</h3>
+              <p class="card-desc">
+                HyperOS için üçüncü taraf MTZ temalarını doğrudan içe aktarın, şifresiz düzenleyin, dönüştürün ve bileşenleri birleştirin. Yeni v5.0 mimarisi ile daha hızlı ve kararlı.
+              </p>
+              <ul class="card-specs-list">
+                <li><span>MİMARİ</span> <span class="val">Native MTZ Engine v5.0</span></li>
+                <li><span>GEREKSİNİM</span> <span class="val">Android 12+ / Shizuku / Root</span></li>
+                <li><span>DAĞITIM</span> <span class="val">GitHub Releases</span></li>
+              </ul>
+              <a class="card-action-btn" href="https://github.com/GloriousApps/HyperOS-MTZ-Studio" target="_blank" rel="noreferrer">
+                <span>KAYNAK KOD &amp; İNDİR (v5.0)</span> <span>↗</span>
+              </a>
+            </div>
           </article>
-          <article class="app-card tempo">
-            <div class="app-card-top"><span class="app-icon">↗</span><span class="pill">ANDROID</span></div>
-            <div class="app-visual visual-tempo"><div class="tempo-line"></div><div class="tempo-time">GESTURE</div><div class="tempo-circle">●</div></div>
-            <div class="app-card-copy"><p class="app-number">02 / SYSTEM TOOL</p><h3>HyperOS Gestures Activator</h3><p>HyperOS 3’ün yerel tam ekran hareketlerini üçüncü taraf başlatıcılarla kullan.</p><a href="https://github.com/GloriousApps/HyperOS-Gestures-Activator" target="_blank" rel="noreferrer">GitHub’da incele <span>↗</span></a></div>
+
+          <!-- CARD 02: GESTURES ACTIVATOR -->
+          <article class="module-card featured">
+            <div class="card-topbar">
+              <span class="module-id">02 // SYSTEM INJECTOR</span>
+              <span class="module-status stable">● STABLE v1.2.0</span>
+            </div>
+            <div class="card-visual-area">
+              <img class="card-icon-img" src="assets/gestures-activator-icon.png" alt="HyperOS Gestures Activator Uygulama Logosu" />
+            </div>
+            <div class="card-content">
+              <div class="card-badge-row">
+                <span class="micro-badge amber">ROOT ZORUNLU</span>
+                <span class="micro-badge cyan">SYSTEM HOOK</span>
+                <span class="micro-badge">TAM EKRAN</span>
+              </div>
+              <h3 class="card-title">HyperOS Gestures Activator</h3>
+              <p class="card-desc">
+                Nova, Lawnchair gibi üçüncü taraf başlatıcılarda engellenen yerel tam ekran hareketlerini root yetkisiyle pürüzsüzce etkinleştirin.
+              </p>
+              <ul class="card-specs-list">
+                <li><span>ENTEGRASYON</span> <span class="val">Root / Magisk / KernelSU</span></li>
+                <li><span>UYUMLULUK</span> <span class="val">HyperOS 1.0 / 2.0 / 3.0</span></li>
+                <li><span>KÖK DURUMU</span> <span class="val" style="color: var(--neon-amber);">Root Zorunlu</span></li>
+              </ul>
+              <a class="card-action-btn" href="https://github.com/GloriousApps/HyperOS-Gestures-Activator" target="_blank" rel="noreferrer">
+                <span>KAYNAK KOD &amp; İNDİR</span> <span>↗</span>
+              </a>
+            </div>
           </article>
-          <article class="app-card keepsake">
-            <div class="app-card-top"><span class="app-icon">∑</span><span class="pill">GELİŞTİRİLİYOR</span></div>
-            <div class="app-visual visual-keepsake"><div class="memory-photo construction-grid"></div><p>hızlı<br />hesapla</p><span>∑</span></div>
-            <div class="app-card-copy"><p class="app-number">03 / ENGINEERING</p><h3>Construction Calc</h3><p>Mühendislik alanındaki günlük hesapları sadeleştiren, geliştirilmekte olan hesap makinesi.</p><a href="mailto:hello@gloriousapps.com?subject=Construction%20Calc">Bilgi al <span>↗</span></a></div>
+
+          <!-- CARD 03: CONSTRUCTION CALC -->
+          <article class="module-card">
+            <div class="card-topbar">
+              <span class="module-id">03 // ENGINEERING ENGINE</span>
+              <span class="module-status dev">◐ IN_DEV v0.8-ALPHA</span>
+            </div>
+            <div class="card-visual-area">
+              <img class="card-icon-img" src="assets/construction-calc-icon.svg" alt="Construction Calc Blueprint Simgesi" />
+            </div>
+            <div class="card-content">
+              <div class="card-badge-row">
+                <span class="micro-badge amber">ÖLÇÜ &amp; MÜHENDİSLİK</span>
+                <span class="micro-badge">FEET · INCH · YARD</span>
+                <span class="micro-badge cyan">ALAN &amp; HACİM</span>
+              </div>
+              <h3 class="card-title">Construction Calc</h3>
+              <p class="card-desc">
+                Saha ve ofiste ölçü ve mühendislik hesaplarını hızlı ve anlaşılır biçimde yapan modern hesap makinesi. Feet, inch ve yard ölçülerini; kesirleri, alan/hacim işlemlerini ve birim dönüşümlerini tek ekranda yönetir.
+              </p>
+              <ul class="card-specs-list">
+                <li><span>ÖLÇÜLER</span> <span class="val">Feet, Inch, Yard &amp; Kesir</span></li>
+                <li><span>HESAPLAMA</span> <span class="val">Alan, Hacim &amp; Birim Dönüşümü</span></li>
+                <li><span>ARAÇLAR</span> <span class="val">Hafıza, Tape/Geçmiş &amp; Klavye</span></li>
+              </ul>
+              <a class="card-action-btn" href="mailto:kadrozturk@gmail.com?subject=Construction%20Calc%20Erken%20Eri%C5%9Fim">
+                <span>ERKEN ERİŞİM / BİLGİ AL</span> <span>↗</span>
+              </a>
+            </div>
           </article>
         </div>
       </section>
 
-      <section class="manifesto" id="about">
-        <div class="manifesto-top"><p class="eyebrow"><span></span> YAKLAŞIMIM</p><p class="mono">ISTANBUL — DÜNYAYA AÇIK</p></div>
-        <p class="big-quote">“İnsanların her gün dönmek isteyeceği şeyleri yapıyorum. Çünkü en iyi teknoloji, kendini değil <em>seni</em> hatırlatır.”</p>
-        <div class="principles"><p><b>01</b> Sadelik, bir eksiklik değil; bir özen biçimidir.</p><p><b>02</b> Her dokunuşun bir nedeni olmalı.</p><p><b>03</b> İyi hissettiren deneyimler kalıcıdır.</p></div>
+      <!-- SYSTEM ARCHITECTURE & STANDARDS SECTION -->
+      <section class="architecture-section" id="architecture">
+        <div class="section-hud-header">
+          <div>
+            <p class="section-label"><span>//</span> SİSTEM MİMARİSİ</p>
+            <h2 class="section-heading-title">Mühendislik Standartları &amp; İlkeler</h2>
+          </div>
+          <div class="section-hud-counter">SPEC_VER: 2026.09</div>
+        </div>
+
+        <div class="arch-grid">
+          <div class="arch-item">
+            <p class="arch-num">PROTOCOL_01</p>
+            <h4 class="arch-title">⚡ Ayrıcalıklı Sistem Müdahalesi</h4>
+            <p class="arch-desc">
+              Modülün gereksinimine göre Shizuku ADB ayrıcalıkları veya Root (Magisk, KernelSU, APatch) altyapısıyla derin sistem entegrasyonu.
+            </p>
+          </div>
+
+          <div class="arch-item">
+            <p class="arch-num">PROTOCOL_02</p>
+            <h4 class="arch-title">🛡️ Sıfır Arka Plan Bloatware</h4>
+            <p class="arch-desc">
+              Gereksiz arka plan servisleri, uykuyu bölen wake-lock'lar ve telemetri izleyicileri barındırmaz. Saf pil ve kaynak tasarrufu.
+            </p>
+          </div>
+
+          <div class="arch-item">
+            <p class="arch-num">PROTOCOL_03</p>
+            <h4 class="arch-title">🔧 HyperOS Native</h4>
+            <p class="arch-desc">
+              Xiaomi HyperOS sistem mimarisi, tema motoru ve hareket API'leri tersine mühendislikle analiz edilerek yerel performans hedeflenir.
+            </p>
+          </div>
+
+          <div class="arch-item">
+            <p class="arch-num">PROTOCOL_04</p>
+            <h4 class="arch-title">🌐 Şeffaf ve Açık Kaynak</h4>
+            <p class="arch-desc">
+              Her kod satırı GitHub üzerinde halka açıktır. Topluluk tarafından denetlenebilir, çatallanabilir ve bağımsız geliştirilebilir.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section class="contact">
-        <div><p class="eyebrow"><span></span> BİRLİKTE GÜZEL BİR ŞEY YAPALIM</p><h2>Bir fikrin mi var?<br /><em>Konuşalım.</em></h2></div>
-        <a class="contact-round" href="mailto:hello@gloriousapps.com" aria-label="GloriousApps'a e-posta gönder">↗</a>
+      <!-- DEVELOPER TERMINAL & CONNECT CONSOLE -->
+      <section class="connect-section" id="connect">
+        <div class="terminal-connect-card">
+          <div class="terminal-top">
+            <span>gloriousapps@system-core: ~ // CONNECT CONSOLE</span>
+            <span>STATUS: READY_FOR_COMMANDS</span>
+          </div>
+          <div class="terminal-content-grid">
+            <div class="terminal-prompt-area">
+              <h2>Topluluğa Katıl &amp; Geliştiriciyle İletişime Geç</h2>
+              <p>
+                HyperOS araçları hakkında geri bildirim vermek, hata raporlamak veya yeni modül önerisinde bulunmak için doğrudan kanallarımıza ulaşabilirsiniz.
+              </p>
+              <div class="terminal-snippet">
+                <code>$ git clone https://github.com/GloriousApps/HyperOS-MTZ-Studio.git</code>
+                <span style="color: var(--text-dim); font-size: 0.7rem;">[READ-ONLY]</span>
+              </div>
+            </div>
+            <div class="connect-buttons">
+              <a class="btn-connect telegram" href="https://t.me/Glorioustr" target="_blank" rel="noreferrer">
+                <span>💬 TELEGRAM İLETİŞİM</span>
+                <span>@Glorioustr ↗</span>
+              </a>
+              <a class="btn-connect" href="https://github.com/GloriousApps" target="_blank" rel="noreferrer">
+                <span>🐙 GITHUB REPOSITORIES</span>
+                <span>@GloriousApps ↗</span>
+              </a>
+              <a class="btn-connect" href="mailto:kadrozturk@gmail.com">
+                <span>✉️ DOĞRUDAN E-POSTA</span>
+                <span>kadrozturk@gmail.com ↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
-    <footer><a class="brand" href="#top"><img class="brand-logo" src="assets/glorious-g-logo.png" alt="" />GloriousApps</a><p>© 2026 GloriousApps. Tüm hakları saklıdır.</p><div><a href="https://github.com/GloriousApps" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:hello@gloriousapps.com">E-posta</a></div></footer>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <a href="#top">GloriousApps // Tooling Lab</a>
+        <span>•</span>
+        <span>© 2026 Kadir Öztürk. Tüm hakları saklıdır.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/GloriousApps" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://t.me/Glorioustr" target="_blank" rel="noreferrer">Telegram İletişim</a>
+        <a href="mailto:kadrozturk@gmail.com">kadrozturk@gmail.com</a>
+        <span>BUILD: REV-2026.09</span>
+      </div>
+    </footer>
   </body>
 </html>

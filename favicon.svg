@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#11152c"/><path d="M32 10l4.4 17.6L54 32l-17.6 4.4L32 54l-4.4-17.6L10 32l17.6-4.4L32 10z" fill="#ff7864"/></svg>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#070b14" stroke="#1c283e" stroke-width="2"/>
+  <circle cx="32" cy="32" r="24" fill="url(#glow)"/>
+  <path d="M42 22H24C19.5 22 16 25.5 16 30V34C16 38.5 19.5 42 24 42H40C42.2 42 44 40.2 44 38V32H31" fill="none" stroke="url(#g-grad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="44" cy="22" r="3" fill="#00f2fe"/>
+</svg>
