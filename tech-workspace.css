@@ -703,6 +703,12 @@ body {
   max-height: 128px;
 }
 
+.mtz-banner {
+  width: min(88%, 390px);
+  height: auto;
+  max-height: 128px;
+}
+
 .card-content {
   padding: 22px 20px 20px;
   display: flex;
