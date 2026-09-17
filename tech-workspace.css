@@ -697,6 +697,12 @@ body {
   transform: scale(1.06);
 }
 
+.construction-logo {
+  width: min(88%, 390px);
+  height: auto;
+  max-height: 128px;
+}
+
 .card-content {
   padding: 22px 20px 20px;
   display: flex;
